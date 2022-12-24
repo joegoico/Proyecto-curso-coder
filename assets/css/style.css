@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400&family=Oswald:wght@300&family=Roboto:wght@300&display=swap');
+*{
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+}
+/* comienzo header */
+.logo{
+    font-family: 'Great Vibes', cursive;
+}
+.nav-link{
+    font-family: 'Roboto', sans-serif;
+    background-color : rgb(248, 230, 211);
+}
+@media (min-width:992px) {
+    .nav-link{
+        background-color: antiquewhite;
+    }
+}
+/* fin header */
+
+/* comienzo main */
+#container{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3fr 1fr;
+}
