@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400&family=Oswald:wght@300&family=Roboto:wght@300&display=swap');
 *{
-    background-color: antiquewhite;
+    background-color: #FFFAFC;
     margin: 0;
     padding: 0;
 }
@@ -40,29 +40,111 @@
 #main-container{
     grid-area: main;
 }
-.main-desktop{
-    display: none;
+.main-img{
+    position: relative;
+    text-align: center;
+    height: 20%;
 }
-.main-desktop__img{
-    width: 200px;
-    height: 200px;
+.main-img__texto{
+    object-fit: cover;
 }
-.main-desktop__img img{
+.main-img h2{
+    position: absolute;
+    background-color: transparent;
+    color: antiquewhite;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-shadow: 0.08em 0.08em 0.08em rgba(1,1,1,0.4);
+}
+.main-img img{
+    object-fit: cover;
+    width: 100%; 
+    height: 100%;
+}
+@media (min-width:768px){
+    .main-img {
+        height: 29%;
+    }
+    .main-img h2{
+        font-size: 3.5rem;
+    }
+}
+.main-info{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 100% ;
+    grid-template-rows: auto auto auto;
+    row-gap: 1rem;
+    grid-template-areas: 
+    
+    "min1 min1"
+    "min2 min2"
+    "mid mid"
+
+    ;
+}
+.main-info h2{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+}
+.main-info__texto{
+    text-align: center;
+}
+.main-info__nutricion1{
+    grid-area: min1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.main-info__nutricion2{
+    margin-top: 10px;
+    grid-area: min2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-info__descripcion{
+    margin-top: 10px;
+    grid-area: mid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-info__img{
+    width: 75%;
+    height: 50%;
+}
+.main-info__img img{
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
-@media (min-width:768px) {
-    #carouselExampleSlidesOnly{
-        display: none;
+@media (min-width:768px){
+    .main-info__nutricion1{
+        flex-direction: row;
     }
-    .main-desktop{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 40px;
+    .main-info__nutricion2{
+        flex-direction: row-reverse;
+    }
+    .main-info__descripcion{
+        flex-direction: row;
+    }
+    .main-info__img{
+        width: 50%;
+        height: 100%;
+        padding: 5px;
+    }
+    .main-info__texto{
+        width: 50%;
     }
 }
+
+
 /*fin main*/
 
 /* comienzo footer */
@@ -70,5 +152,6 @@
     grid-area: footer;
     background-color: blue;
     height: 60px;
+    bottom: 0px;
 }
 /* fin footer */
