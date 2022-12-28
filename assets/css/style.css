@@ -4,22 +4,9 @@
     margin: 0;
     padding: 0;
 }
-#body-index{
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: 
-    
-        "head"
-        "main"
-        "footer"    
-    ;
-}
 /* comienzo header */
 #header-container{
     background-color : rgb(248, 230, 211);
-    grid-area: head;
 }
 .logo{
     font-family: 'Great Vibes', cursive;
@@ -36,17 +23,17 @@
 }
 /* fin header */
 
-/* comienzo main */
+/* comienzo main index*/
 #main-container{
-    grid-area: main;
+    margin-bottom: 10px;
 }
 .main-img{
     position: relative;
     text-align: center;
-    height: 20%;
+    height: 15rem;
 }
 .main-img__texto{
-    object-fit: cover;
+    min-height: fit-content;
 }
 .main-img h2{
     position: absolute;
@@ -54,7 +41,7 @@
     color: antiquewhite;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -67,7 +54,7 @@
 }
 @media (min-width:768px){
     .main-img {
-        height: 29%;
+        height: 22rem;
     }
     .main-img h2{
         font-size: 3.5rem;
@@ -143,15 +130,25 @@
         width: 50%;
     }
 }
+/*fin main index*/
 
-
-/*fin main*/
+/* comienzo sección servicios */
+#turnosDesktop{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    display: none;
+}
+#turnosMobile{
+    width: 100%;
+    height: 100px;
+    border: 2px solid black;
+}
+/* fin seccion servicios */
 
 /* comienzo footer */
 #footer-container{
-    grid-area: footer;
-    background-color: blue;
+    background-color: #110A03;
     height: 60px;
-    bottom: 0px;
 }
 /* fin footer */
