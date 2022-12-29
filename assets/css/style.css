@@ -7,6 +7,9 @@
 /* comienzo header */
 #header-container{
     background-color : rgb(248, 230, 211);
+    /* position: fixed;
+    width: 100%;
+    margin-top: 0; */
 }
 .logo{
     font-family: 'Great Vibes', cursive;
@@ -144,16 +147,26 @@
 /* .form-input__textarea textarea{
     width: 100vh;
 } */
+.main-form{
+    grid-area: form;
+}
+#main-turnos{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto ;
+    grid-template-areas:
+    
+    "mimg "
+    "form "
+    "turnos"
+    ;
+}
 #turnos{
     grid-area: turnos;
     margin-top: 10px;
     width: 100%;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-}
-.main-form{
-    grid-area: form;
+    /* display: flex;
+    flex-direction: column; */
 }
 @media (min-width:768px){
     /* #turnos{
@@ -162,12 +175,11 @@
     #main-turnos{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 1fr auto;
+        grid-template-rows: auto 1fr ;
         grid-template-areas:
 
             "mimg mimg"
             "form turnos"
-            "footer footer"
         ;
     }
 }
@@ -175,7 +187,7 @@
 
 /* comienzo footer */
 #footer-container{
-    grid-area: footer;
+    /* grid-area: footer; */
     background-color: #110A03;
     height: 60px;
 }
