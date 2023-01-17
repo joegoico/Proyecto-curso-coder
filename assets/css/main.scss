@@ -1,0 +1,12 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400&family=Oswald:wght@300&family=Roboto:wght@300&display=swap');
+*{
+    background-color: #FFFAFC;
+    margin: 0;
+    padding: 0;
+}
+@import '_header';
+@import '_mainIndex';
+@import '_mainServicios';
+@import '_mainTurnos';
+@import '_footer';

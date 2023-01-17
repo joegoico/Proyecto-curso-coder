@@ -1,0 +1,16 @@
+#header-container{
+    background-color : rgb(247, 237, 227);
+}
+.logo{
+    font-family: 'Great Vibes', cursive;
+}
+.nav-link{
+    font-family: 'Roboto', sans-serif;
+}
+@media (min-width:992px) {
+    #navbarNavAltMarkup{
+        margin-left: 10px;
+        display: flex;
+        justify-content: end;
+    }
+}

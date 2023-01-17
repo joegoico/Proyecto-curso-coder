@@ -1,0 +1,30 @@
+/* comienzo main turnos */
+#main-turnos{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto ;
+    grid-template-areas:
+    
+    "mimg "
+    "form "
+    "turnos"
+    ;
+}
+#turnos{
+    grid-area: turnos;
+    margin-top: 10px;
+    width: 100%;
+}
+@media (min-width:768px){
+    #main-turnos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr ;
+        grid-template-areas:
+
+            "mimg mimg"
+            "form turnos"
+        ;
+    }
+}
+/* fin main trunos */
