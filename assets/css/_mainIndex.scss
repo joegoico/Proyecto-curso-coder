@@ -1,5 +1,41 @@
-$info-direction: column;
-$info-align: center;
+//Variabales
+    $info-direction: column;
+    $info-align: center;
+    $containerImg-height: 15rem;
+    $font-weight: 600;
+    $info-marginTop: 10px;
+    $color-h2: antiquewhite;
+    $width:100%;
+    $height:100%;
+//funciones
+    @mixin flex-column-center{
+        display: flex;
+        flex-direction: $info-direction;
+        align-items: $info-align;
+        margin-top: $info-marginTop;
+    }
+    @mixin sizes(){
+        height: $height;
+        width: $width;
+    }
+    @mixin grid-info{
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: auto auto auto;
+        row-gap: 1rem;
+    }
+    @mixin h2-img{
+        position: absolute;
+        background-color: transparent;
+        color: $color-h2;
+        text-transform: uppercase;
+        font-weight: $font-weight;
+        font-size: 1.8rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-shadow: 0.08em 0.08em 0.08em rgba(1,1,1,0.4);
+    }
 #main-container{
     margin-bottom: 10px;
 }
@@ -7,29 +43,19 @@ $info-align: center;
     grid-area: mimg;
     position: relative;
     text-align: center;
-    height: 15rem;
+    height:$containerImg-height;
 }
 .main-img__texto{
     min-height: fit-content;
 }
 .main-img 
     h2{
-        position: absolute;
-        background-color: transparent;
-        color: antiquewhite;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 1.8rem;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        text-shadow: 0.08em 0.08em 0.08em rgba(1,1,1,0.4);
+        @include h2-img();
     }
 .main-img 
     img{
         object-fit: cover;
-        width: 100%;
-        height: 100%;
+        @include sizes();
     }
 @media (min-width:768px){
     .main-img {
@@ -41,11 +67,8 @@ $info-align: center;
         }
 }
 .main-info{
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: 100% ;
-    grid-template-rows: auto auto auto;
-    row-gap: 1rem;
+    margin-top: $info-marginTop;
+    @include grid-info();
     grid-template-areas:
 
     "min1 min1"
@@ -57,41 +80,31 @@ $info-align: center;
 .main-info 
     h2{
         font-family: 'Montserrat',sans-serif;
-        font-weight: 600;
+        font-weight: $font-weight;
     }
 .main-info__texto{
     text-align: $info-align;
 }
 .main-info__nutricion1{
     grid-area: min1;
-    display: flex;
-    flex-direction: $info-direction;
-    align-items: $info-align;
-    margin-top: 10px;
+    @include flex-column-center();
 }
 .main-info__nutricion2{
-    margin-top: 10px;
     grid-area: min2;
-    display: flex;
-    flex-direction: $info-direction;
-    align-items: $info-align;
+    @include flex-column-center();
 }
 .main-info__descripcion{
-    margin-top: 10px;
     grid-area: mid;
-    display: flex;
-    flex-direction: $info-direction;
-    align-items: $info-align;
+    @include flex-column-center();
 }
 .main-info__img{
-    width: 75%;
-    height: 50%;
+    width: $width -25;
+    height: $height/2;
 }
 .main-info__img 
     img{
         object-fit: cover;
-        width: 100%;
-        height: 100%;
+        @include sizes();
     }
 @media (min-width:768px){
     .main-info__nutricion1{
@@ -104,8 +117,8 @@ $info-align: center;
         flex-direction: row;
     }
     .main-info__img{
-        width: 50%;
-        height: 100%;
+        width: $width/2;
+        height: $height;
         padding: 5px;
     }
     .main-info__texto{

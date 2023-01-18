@@ -1,13 +1,19 @@
+//variables
+    $color-footer:#110A03;
+    $color-icono:#FFFAFC;
+    $footer-height: 60px;
+    $icono-size: 40px;
+    $iconos-margin:5px;
 #footer{
-    background-color: #110A03;
-    height: 60px;
+    background-color: $color-footer;
+    height: $footer-height;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 .footer-icono{
     background-color: transparent;
-    color: #FFFAFC;
-    font-size: 40px;
-    margin: 5px;
+    color: $color-icono;
+    font-size: $icono-size;
+    margin: $iconos-margin;
 }

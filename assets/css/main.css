@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400&family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
 * {
@@ -59,8 +58,8 @@
 .main-img img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -98,31 +97,31 @@
 }
 
 .main-info__nutricion2 {
-  margin-top: 10px;
   grid-area: min2;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10px;
 }
 
 .main-info__descripcion {
-  margin-top: 10px;
   grid-area: mid;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10px;
 }
 
 .main-info__img {
-  width: 75%;
+  width: 100% -25;
   height: 50%;
 }
 
 .main-info__img img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -144,21 +143,6 @@
     width: 50%;
   }
 }
-/* comienzo sección servicios */
-.form-input label {
-  font-family: "Roboto", sans-serif;
-}
-
-.form-input__textarea {
-  display: flex;
-  flex-direction: column;
-}
-
-.main-form {
-  grid-area: form;
-}
-
-/* fin seccion servicios */
 /* comienzo main turnos */
 #main-turnos {
   display: grid;
@@ -181,6 +165,19 @@
     grid-template-areas: "mimg mimg" "form turnos";
   }
 }
+.form-input label {
+  font-family: "Roboto", sans-serif;
+}
+
+.form-input__textarea {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-form {
+  grid-area: form;
+}
+
 /* fin main trunos */
 #footer {
   background-color: #110A03;

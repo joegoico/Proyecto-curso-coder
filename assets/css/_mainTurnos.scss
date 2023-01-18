@@ -1,3 +1,5 @@
+//variables
+    $width-turnos:100%;
 /* comienzo main turnos */
 #main-turnos{
     display: grid;
@@ -13,7 +15,7 @@
 #turnos{
     grid-area: turnos;
     margin-top: 10px;
-    width: 100%;
+    width: $width-turnos;
 }
 @media (min-width:768px){
     #main-turnos{
@@ -26,5 +28,17 @@
             "form turnos"
         ;
     }
+}
+.form-input 
+    label{
+        font-family:'Roboto', sans-serif ;
+    }
+.form-input__textarea{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-form{
+    grid-area: form;
 }
 /* fin main trunos */
