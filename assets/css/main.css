@@ -1,13 +1,16 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400&family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
 * {
-  background-color: #FFFAFC;
   margin: 0;
   padding: 0;
 }
 
+body {
+  background-color: #FFFAFC !important;
+}
+
 #header-container {
-  background-color: rgb(247, 237, 227);
+  background-color: #f9eedf;
 }
 
 .logo {
@@ -16,13 +19,18 @@
 
 .nav-link {
   font-family: "Roboto", sans-serif;
+  font-weight: 600 !important;
 }
 
 @media (min-width: 992px) {
+  .nav-link:hover {
+    font-size: 1.1rem;
+    transition: font-size 0.5s;
+  }
   #navbarNavAltMarkup {
     margin-left: 10px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 #main-container {
@@ -45,9 +53,9 @@
 .main-img h2 {
   position: absolute;
   background-color: transparent;
-  color: antiquewhite;
+  color: #f9eedf;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 1.8rem;
   top: 50%;
   left: 50%;
@@ -81,7 +89,10 @@
 
 .main-info h2 {
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 800;
+  margin-top: 10px;
+  color: #d5693f;
+  text-transform: uppercase;
 }
 
 .main-info__texto {
@@ -90,6 +101,8 @@
 
 .main-info__nutricion1 {
   grid-area: min1;
+  height: auto;
+  word-wrap: break-word;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,6 +111,8 @@
 
 .main-info__nutricion2 {
   grid-area: min2;
+  height: auto;
+  word-wrap: break-word;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,6 +121,8 @@
 
 .main-info__descripcion {
   grid-area: mid;
+  height: auto;
+  word-wrap: break-word;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,26 +130,29 @@
 }
 
 .main-info__img {
-  width: 100% -25;
-  height: 50%;
+  width: 95%;
+  height: 60%;
 }
 
 .main-info__img img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 768px) {
   .main-info__nutricion1 {
     flex-direction: row;
+    height: 1fr;
   }
   .main-info__nutricion2 {
     flex-direction: row-reverse;
+    height: 1fr;
   }
   .main-info__descripcion {
     flex-direction: row;
+    height: 1fr;
   }
   .main-info__img {
     width: 50%;
@@ -143,6 +163,12 @@
     width: 50%;
   }
 }
+#header-servicios {
+  background-color: rgba(249, 238, 223, 0.2392156863);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.582);
+  box-shadow: 0px 2px 0px 0px rgba(209, 204, 204, 0.24);
+}
+
 /* comienzo main turnos */
 #main-turnos {
   display: grid;
