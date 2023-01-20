@@ -1,17 +1,27 @@
-$color-fondo: rgb(247, 237, 227);
+$color-fondo: rgb(145, 101, 63);
+//funciones
+    @mixin hover-links(){
+        font-size: 1.1rem ;
+        transition: font-size .5s;
+
+    }
 #header-container{
-    background-color : $color-fondo;
+    background-color : $color-fondo ;
 }
 .logo{
     font-family: 'Great Vibes', cursive;
 }
 .nav-link{
     font-family: 'Roboto', sans-serif;
+    font-weight: 600 !important;
+    &:hover{
+        @include hover-links();
+    }
 }
 @media (min-width:992px) {
     #navbarNavAltMarkup{
         margin-left: 10px;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
     }
 }

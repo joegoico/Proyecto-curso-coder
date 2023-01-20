@@ -10,6 +10,9 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    a{
+        background-color: $color-footer;
+    }
 }
 .footer-icono{
     background-color: transparent;
