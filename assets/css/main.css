@@ -262,6 +262,9 @@ label {
   justify-content: flex-end;
   align-items: center;
 }
+#footer a {
+  background-color: #110A03;
+}
 
 .footer-icono {
   background-color: transparent;
