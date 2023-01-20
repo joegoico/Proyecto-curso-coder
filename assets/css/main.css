@@ -1,5 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400&family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300&family=Open+Sans:wght@300&family=Poppins:wght@200&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -18,8 +18,9 @@ body {
 }
 
 .nav-link {
-  font-family: "Roboto", sans-serif;
-  font-weight: 600 !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 @media (min-width: 992px) {
@@ -31,6 +32,26 @@ body {
     margin-left: 10px;
     display: flex;
     justify-content: flex-end;
+  }
+}
+@-webkit-keyframes aparicionH2 {
+  0% {
+    opacity: 0;
+    top: 0%;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
+@keyframes aparicionH2 {
+  0% {
+    opacity: 0;
+    top: 0%;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
   }
 }
 #main-container {
@@ -61,6 +82,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-shadow: 0.08em 0.08em 0.08em rgba(1, 1, 1, 0.4);
+  -webkit-animation-name: aparicionH2;
+          animation-name: aparicionH2;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  font-family: "Montserrat", sans-serif;
 }
 
 .main-img img {
@@ -79,7 +105,8 @@ body {
   }
 }
 .main-info {
-  margin-top: 10px;
+  width: 75%;
+  margin: auto;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto;
@@ -163,7 +190,7 @@ body {
     width: 50%;
   }
 }
-#header-servicios {
+#header-secundario {
   background-color: rgba(249, 238, 223, 0.2392156863);
   border-bottom: 1px solid rgba(128, 128, 128, 0.582);
   box-shadow: 0px 2px 0px 0px rgba(209, 204, 204, 0.24);
@@ -172,9 +199,10 @@ body {
 /* comienzo main turnos */
 #main-turnos {
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 85%;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: "mimg " "form " "turnos";
+  justify-content: center;
 }
 
 #turnos {
@@ -182,17 +210,23 @@ body {
   margin-top: 10px;
   width: 100%;
 }
+#turnos h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
 
 @media (min-width: 768px) {
   #main-turnos {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "mimg mimg" "form turnos";
+    grid-template-columns: 60% auto;
+    grid-template-rows: auto;
+    grid-template-areas: "form turnos";
   }
 }
-.form-input label {
-  font-family: "Roboto", sans-serif;
+label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: black;
 }
 
 .form-input__textarea {
@@ -202,6 +236,22 @@ body {
 
 .main-form {
   grid-area: form;
+}
+
+.turnos-disponibles {
+  height: auto;
+  border: 1px solid black;
+  text-align: center;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.turnos-info {
+  height: auto;
+  border: 1px solid black;
+  text-align: center;
+  margin-left: 15px;
+  margin-bottom: 10px;
 }
 
 /* fin main trunos */

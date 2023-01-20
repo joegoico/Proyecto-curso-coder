@@ -30,7 +30,16 @@ $height: 100%;
     grid-template-rows: auto auto auto;
     row-gap: 1rem;
 }
-
+@keyframes aparicionH2 {
+    0%{
+        opacity: 0;
+        top: 0%;
+    }
+    100%{
+        top: 50%;
+        opacity: 1;
+    }
+}
 @mixin h2-img {
     position: absolute;
     background-color: transparent;
@@ -42,6 +51,8 @@ $height: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-shadow: 0.08em 0.08em 0.08em rgba(1, 1, 1, 0.4);
+    animation-name: aparicionH2;
+    animation-duration: 1s;
 }
 
 @mixin h2-info {
@@ -70,6 +81,7 @@ $height: 100%;
 .main-img 
     h2 {
         @include h2-img();
+        font-family: 'Montserrat', sans-serif;
     }
 
 .main-img img {
@@ -89,7 +101,8 @@ $height: 100%;
 }
 
 .main-info {
-    margin-top: $info-marginTop;
+    width: 75%;
+    margin: auto;
     @include grid-info();
     grid-template-areas:
 
