@@ -5,6 +5,8 @@
     $icono-size: 40px;
     $iconos-margin:5px;
 #footer{
+    grid-area: footer;
+    width: 100%;
     background-color: $color-footer;
     height: $footer-height;
     display: flex;

@@ -10,7 +10,19 @@
         margin-bottom: 10px;
     }
 /* comienzo main turnos */
+.body-turnos{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 60px;
+    grid-template-areas: 
+    
+    "header"
+    "main"
+    "footer"
+    ;
+}
 #main-turnos{
+    grid-area: main;
     display: grid;
     grid-template-columns: 85%;
     grid-template-rows: auto 1fr auto ;

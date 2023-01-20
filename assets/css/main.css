@@ -7,9 +7,12 @@
 
 body {
   background-color: #FFFAFC !important;
+  min-height: 100vh;
+  position: relative;
 }
 
 #header-container {
+  grid-area: header;
   background-color: #f9eedf;
 }
 
@@ -54,10 +57,6 @@ body {
     opacity: 1;
   }
 }
-#main-container {
-  margin-bottom: 10px;
-}
-
 .main-img {
   grid-area: mimg;
   position: relative;
@@ -197,7 +196,15 @@ body {
 }
 
 /* comienzo main turnos */
+.body-turnos {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto 60px;
+  grid-template-areas: "header" "main" "footer";
+}
+
 #main-turnos {
+  grid-area: main;
   display: grid;
   grid-template-columns: 85%;
   grid-template-rows: auto 1fr auto;
@@ -256,6 +263,8 @@ label {
 
 /* fin main trunos */
 #footer {
+  grid-area: footer;
+  width: 100%;
   background-color: #110A03;
   height: 60px;
   display: flex;

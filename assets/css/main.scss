@@ -6,6 +6,8 @@
 }
 body{
     background-color: #FFFAFC !important;
+    min-height: 100vh;
+    position: relative;
 }
 @import '_header';
 @import '_mainIndex';
