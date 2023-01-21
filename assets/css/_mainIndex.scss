@@ -33,7 +33,7 @@ $height: 100%;
 @keyframes aparicionH2 {
     0%{
         opacity: 0;
-        top: 0%;
+        top: 40%;
     }
     100%{
         top: 50%;
@@ -63,9 +63,6 @@ $height: 100%;
     text-transform: uppercase;
 }
 
-#main-container {
-    
-}
 
 .main-img {
     grid-area: mimg;

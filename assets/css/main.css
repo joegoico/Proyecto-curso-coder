@@ -11,9 +11,12 @@ body {
   position: relative;
 }
 
-#header-container {
+#header-secundario {
   grid-area: header;
-  background-color: #f9eedf;
+  background-color: rgba(249, 238, 223, 0.2392156863);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.582);
+  box-shadow: 0px 2px 0px 0px rgba(209, 204, 204, 0.24);
+  margin-bottom: 2px;
 }
 
 .logo {
@@ -40,7 +43,7 @@ body {
 @-webkit-keyframes aparicionH2 {
   0% {
     opacity: 0;
-    top: 0%;
+    top: 40%;
   }
   100% {
     top: 50%;
@@ -50,7 +53,7 @@ body {
 @keyframes aparicionH2 {
   0% {
     opacity: 0;
-    top: 0%;
+    top: 40%;
   }
   100% {
     top: 50%;
@@ -189,12 +192,6 @@ body {
     width: 50%;
   }
 }
-#header-secundario {
-  background-color: rgba(249, 238, 223, 0.2392156863);
-  border-bottom: 1px solid rgba(128, 128, 128, 0.582);
-  box-shadow: 0px 2px 0px 0px rgba(209, 204, 204, 0.24);
-}
-
 /* comienzo main turnos */
 .body-turnos {
   display: grid;
@@ -259,6 +256,10 @@ label {
   text-align: center;
   margin-left: 15px;
   margin-bottom: 10px;
+}
+
+.form-control {
+  box-shadow: 2px 2px 2px 2px rgba(209, 204, 204, 0.24);
 }
 
 /* fin main trunos */

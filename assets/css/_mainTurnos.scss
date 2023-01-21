@@ -1,6 +1,7 @@
 //variables
     $width-turnos:100%;
     $color-label:black;
+    $color-sombra:rgba(209, 204, 204, 0.24);
 //funciones
     @mixin divTurnos-sizes(){
         height: auto;
@@ -81,5 +82,8 @@ label{
 }
 .turnos-info{
     @include divTurnos-sizes();
+}
+.form-control{
+    box-shadow: 2px 2px 2px 2px $color-sombra;
 }
 /* fin main trunos */

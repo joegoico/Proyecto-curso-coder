@@ -1,13 +1,19 @@
 $color-fondo: #f9eedf;
+$color-fondo: #f9eedf3d;
+$color-borde:rgba(128, 128, 128, 0.582);
+$color-sombra:rgba(209, 204, 204, 0.24);
 //funciones
     @mixin hover-links(){
         font-size: 1.1rem ;
         transition: font-size .5s;
 
     }
-#header-container{
+#header-secundario {
     grid-area: header;
-    background-color : $color-fondo ;
+    background-color: $color-fondo;
+    border-bottom: 1px solid $color-borde;
+    box-shadow: 0px 2px 0px 0px $color-sombra;
+    margin-bottom: 2px;
 }
 .logo{
     font-family: 'Great Vibes', cursive;
