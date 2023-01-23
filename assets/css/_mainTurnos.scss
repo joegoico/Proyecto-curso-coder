@@ -25,12 +25,6 @@
     display: grid;
     @include body-grid(0.2fr,auto ,60px );
 }
-@media (min-width:992px){
-    // .body-turnos{
-    //     display: grid;
-    //     @include body-grid(8%, auto, 60px);
-    // }
-}
 #main-turnos{
     grid-area: main;
     display: grid;
