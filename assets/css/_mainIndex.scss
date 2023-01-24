@@ -110,9 +110,13 @@ $height: 100%;
     ;
 }
 
-.main-info h2 {
-    @include h2-info();
-}
+.main-info 
+    h2 {
+        @include h2-info();
+    }
+    h3{
+        @include h2-info();
+    }
 
 .main-info__texto {
     text-align: $info-align;
