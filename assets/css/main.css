@@ -73,7 +73,7 @@ body {
   min-height: fit-content;
 }
 
-.main-img h1 {
+.main-img h2 {
   position: absolute;
   background-color: transparent;
   color: #f9eedf;
@@ -102,7 +102,7 @@ body {
   .main-img {
     height: 22rem;
   }
-  .main-img h1 {
+  .main-img h2 {
     font-size: 3.5rem;
   }
 }
